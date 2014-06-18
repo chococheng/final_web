@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>政大球場資訊平台</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="styles/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript">
+				$(document).ready(function() {
+				$("a.fancyimage").fancybox({
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'	});
+				});
+	</script>
+	</head>
+	<body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">系隊版</a></li>
+            <li><a href="menu.html">賽程表</a></li>
+            <li><a href="place.html" class="current">借球場</a></li>
+            <li><a href="rule.html">規則</a></li>
+            <!--li><a href="reviews.html">Reviews</a></li-->
+            <!--li><a href="contact.html">Contact</a></li-->
+            
+          </ul>
+        </nav>
+        <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="account.html" id="accountinfo" class="acc">帳戶</a></p>
+          <h1 class="title">體育館</h1>
+          <h3 class="tagline"></h3>
+
+     
+      </header>
+      <div class="wrapper">
+        <div class="border"></div>
+        <article>
+          <div class="left">
+            <h3></h3>
+    
+              <img src="images/court1.png" width="500px" style="margin-left:45px" USEMAP="#court1" BORDER=0>
+<map name="court1">
+  <area shape="rect" coords="169,29,408,148" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="171,150,408,269" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="169,266,407,386" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="171,387,408,505" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="51,233,170,436" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="407,227,527,426" href="timetable.html"  alt="" title="">
+  <area shape="rect" coords="50,461,169,669" href="timetable.html"  alt="" title="">
+</map>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <h3>球場選擇</h3>
+          <ul class="blog">
+            <li><a href="place.html">體育館</a><br/></li><br>
+            <li><a href="place2.html">六期籃排球場</a><br/></li><br>              
+            <li><a href="place3.html">河堤籃球場</a><br/></li><br>
+            <li><a href="#">河堤棒球場</a><br/></li><br>
+           
+          </ul>
+        <div class="border3"></div>
+      
+        </aside>
+
+        <div class="border2"></div>
+        
+        <br>
+      </div>
+      <footer>
+       
+        <div class="footer-widget">
+          </footer>
+    </div>
+</body>
+</html>

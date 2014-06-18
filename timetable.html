@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>政大球場資訊平台</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="styles/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="styles/colorbox.css" rel="stylesheet">
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="scripts/jquery.colorbox.js"></script>
+  <script type="text/javascript" src="timetable_checkbox.js"></script>
+  <script type="text/javascript" src="scripts/ball.js"></script>
+	<!--script>
+        //Parse.initialize("SKfw8dxK0Mb7xIPUw8oT4UIwISEMXrVYlVyN9oAZ", "1dKtJ5ywMf1l6O0Jl6X2SLetVtfFFhj1iPvYUWnl");
+        var currentUser = Parse.User.current();
+        
+				$(document).ready(function() {
+    			$("a.fancyimage").fancybox({
+    				'overlayShow'	: false,
+    				'transitionIn'	: 'elastic',
+    				'transitionOut'	: 'elastic'	
+          });
+          
+          $(".fa-comment-o").click(function(){
+            var template='<h1>留言板</h1>'+'<div style="margin:10px auto">'+'<h6>我想要協調</h6>'+'<form name="fm3"><input onchange="input()" name="put" class="left" type="text" style="width:600px"/></form></div>'+'<div class="border3" style="margin:10px auto"></div>';
+            var message='<div><img src="jagar.jpg" width="90px" height="90px" class="left"></img><div><h6>資管豹</h6><p>這個場地我要定了！</p></div></div>'
+              $.colorbox({
+                html :template+message , //在燈箱中要顯示的html字段
+                width : 700, //燈箱中間區塊的寬度
+                 //燈箱中間區塊的高度
+              
+              });
+              
+				  });
+          
+        
+      });
+        function input(){
+          var Msg = Parse.Object.extend("Msg");
+          var msg= new Msg();
+          
+          msg.set("message", document.fm3.put.value);
+          console.log(msg);
+          msg.save(null,{
+            success: function(){
+              alert("s");
+            },
+            error: function(message,error){
+              alert(error.message+error.code);
+            }
+          });
+          
+          
+
+        }
+        
+       
+	</script-->
+	</head>
+	<body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">系隊版</a></li>
+            <li><a href="menu.html">賽程表</a></li>
+            <li><a href="place.html" class="current">借球場</a></li>
+            <li><a href="rule.html">規則</a></li>
+            <!--li><a href="reviews.html">Reviews</a></li-->
+            <!--li><a href="contact.html">Contact</a></li-->
+          </ul>
+        </nav>
+        <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="account.html" id="accountinfo" class="acc">帳戶</a></p>
+      </header>
+      <div class="wrapper">
+        <div class="border"></div>
+        <article class="fullwidth gallery">
+          <h3>時刻表</h3>
+          <table border="1" style="width:900px;text-align:center" align="center" id="timetable">
+            <thead>
+              <tr>
+                <th></td>
+                <th style="text-align:center">一</th>
+                <th style="text-align:center">二</th>
+                <th style="text-align:center">三</th>
+                <th style="text-align:center">四</th>
+                <th style="text-align:center">五</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>早上</td>
+                <td> 
+                  <div>
+                    <div id="icon1-1" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="1-1" class="i">
+                    <i class="fa fa-comment-o fa-2x" ></i>
+                  </div>
+                </td>
+                <td>
+                 <div>
+                    <div id="icon2-1" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="2-1" class="i">
+                    <i class="fa fa-comment-o fa-2x" ></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon3-1" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="3-1" class="i"> 
+                    <i class="fa fa-comment-o fa-2x" ></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon4-1" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="4-1" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon5-1" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="5-1" class="i"> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+              <tr>
+                <td>下午</td>
+                <td>
+                  <div>
+                    <div id="icon1-2" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="1-2" class="i"> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon2-2" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="2-2" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                 <div>
+                    <div id="icon3-2" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="3-2" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon4-2" style="font-size:30px"></div>
+                    <br>
+                   <input type="checkbox" id="4-2" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon5-2" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="5-2" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+
+              <tr>
+                <td>晚上</td>
+                <td>
+                  <div>
+                    <div id="icon1-3" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="1-3" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon2-3" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="2-3" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                 <div>
+                    <div id="icon3-3" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="3-3" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon4-3" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="4-3" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div id="icon5-3" style="font-size:30px"></div>
+                    <br>
+                    <input type="checkbox" id="5-3" class="i">
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+              </tr>
+            </tbody>
+            
+            
+          </table>
+        </article>
+        <div class="border2"></div>
+        <br>
+      </div>
+      <footer>
+       
+        <div class="footer-widget">
+          </footer>
+    </div>
+
+
+</body>
+</html>

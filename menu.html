@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>政大球場資訊平台</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link href='calendar/fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='calendar/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='calendar/lib/jquery.min.js'></script>
+<script src='calendar/lib/jquery-ui.custom.min.js'></script>
+<script src='calendar/fullcalendar/fullcalendar.min.js'></script>
+<script>
+
+  $(document).ready(function() {
+  
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      editable: false,
+      events: [
+        {
+          title: '會計vs金融',
+          start: new Date(y, m, d-7, 12, 0),
+          allDay: false
+        },
+        
+   
+        {
+          title: '資管vs財管',
+          start: new Date(y, m, d, 12, 0),
+          allDay: false
+        },
+        {
+          title: '國貿vs風管',
+          start: new Date(y, m, d+2, 12, 0),
+          allDay: false
+        },
+        
+        
+      ]
+    });
+    
+  });
+
+</script>
+</head>
+<body>
+<div id="container">
+  <header>
+    <nav>
+      <ul id="nav">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">系隊版</a></li>
+        <li><a href="menu.html" class="current">賽程表</a></li>
+        <li><a href="place.html">借球場</a></li>
+        <li><a href="rule.html">規則</a></li>
+        <!--li><a href="reviews.html">Reviews</a></li-->
+        <!--li><a href="contact.html">Contact</a></li-->
+      </ul>
+    </nav>
+    <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="account.html" id="accountinfo" class="acc">帳戶</a></p>
+  </header>
+  <div class="wrapper">
+    <div class="border"></div>
+    <article>
+      <div class="left">
+        <div id="calendar"></div>
+      </div>
+  </article>
+   
+    <aside class="sidebar">
+      <h3>賽事分類</h3>
+      <ul class="blog">
+        <li><a href="#">排球</a><br/></li><br>
+        <li><a href="#">棒球</a><br/></li><br>
+          
+        <li><a href="#">籃球</a><br/></li><br>
+        <li><a href="#">羽球</a><br/></li><br>
+        <li><a href="#">足球</a><br/></li><br>
+      </ul>
+      <div class="border3"></div>
+      
+    </aside>
+    <aside class="sidebar">
+      <h3>延賽資訊</h3>
+    </aside>
+    <div class="border2"></div>
+    <br>
+  </div>
+
+  <footer>
+   </footer>
+</div>
+</body>
+</html>
