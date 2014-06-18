@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>政大球場資訊平台</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="styles/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="styles/colorbox.css" rel="stylesheet">
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="scripts/jquery.colorbox.js"></script>
+  <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+  <script type="text/javascript" src="scripts/ball.js"></script>
+	
+	</head>
+	<body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">系隊版</a></li>
+            <li><a href="menu.html">賽程表</a></li>
+            <li><a href="place.html" class="current">借球場</a></li>
+            <li><a href="rule.html">規則</a></li>
+           
+          </ul>
+        </nav>
+        <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="#" id="accountinfo" class="acc">帳戶</a></p>
+      </header>
+      <div class="wrapper">
+        <div class="border"></div>
+        <h3>帳戶資訊</h3>
+        <form name="acc_fm">
+          <h4></h4>
+          描述：<br>
+          <input type="text" name="about" style="width:60%; height:100px"></input>
+          <br><br>
+          照片：
+          <input type="file" value="upload" id="imageload" name="imgfile" />
+          <input type="button" id="team_phoho" name="image"/>
+          <br><br>
+          <input type="button" id="account_submit" value="submit"/><br>
+        </form>
+        <div class="border2"></div>
+        <br>
+      </div>
+      <footer>
+       
+        <div class="footer-widget">
+          </footer>
+    </div>
+</body>
+</html>

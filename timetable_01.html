@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>政大球場資訊平台</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="styles/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="styles/colorbox.css" rel="stylesheet">
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="scripts/jquery.colorbox.js"></script>
+	<script>
+				$(document).ready(function() {
+  				$("a.fancyimage").fancybox({
+  				'overlayShow'	: false,
+  				'transitionIn'	: 'elastic',
+  				'transitionOut'	: 'elastic'	});
+          
+          $(".fa-comment-o").click(function(){
+            var template='<h1>留言板</h1>'+'<div style="margin:10px auto">'+'<h6>我想要協調</h6>'+'<input class="left" type="text" style="width:600px"></input><button>送出</button></div>'+'<div class="border3" style="margin:10px auto"></div>';
+            var message='<div><img src="jagar.jpg" width="90px" height="90px" class="left"></img><div><h6>資管豹</h6><p>這個場地我要定了！</p></div></div>'
+            $.colorbox({
+              html :template+message , //在燈箱中要顯示的html字段
+              width : 700, //燈箱中間區塊的寬度
+               //燈箱中間區塊的高度
+              
+             }
+          );
+				});
+        });
+
+	</script>
+	</head>
+	<body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">系隊版</a></li>
+            <li><a href="menu.html">賽程表</a></li>
+            <li><a href="place.html" class="current">借球場</a></li>
+            <!--li><a href="reviews.html">Reviews</a></li-->
+            <!--li><a href="contact.html">Contact</a></li-->
+          </ul>
+        </nav>
+        <p id="account"><a href="#" id="login" class="acc">登入</a><a href="#" id="register" class="acc">註冊</a></p>
+      </header>
+      <div class="wrapper">
+        <div class="border"></div>
+        <article class="fullwidth gallery">
+          <h3>時刻表</h3>
+          <table border="1" style="width:900px;text-align:center" align="center" id="timetable">
+            <thead>
+              <tr>
+                <th></td>
+                <th style="text-align:center">一</th>
+                <th style="text-align:center">二</th>
+                <th style="text-align:center">三</th>
+                <th style="text-align:center">四</th>
+                <th style="text-align:center">五</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>早上</td>
+                <td >
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+              <tr>
+                <td>下午</td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+
+              <tr>
+                <td>晚上</td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                <td>
+                  <div class="icon">
+                    <i class="fa fa-check-square-o fa-2x"></i> 
+                    <i class="fa fa-comment-o fa-2x"></i>
+                  </div>
+                </td>
+                
+              </tr>
+              </tr>
+            </tbody>
+            
+            
+          </table>
+        </article>
+        <div class="border2"></div>
+        <br>
+      </div>
+      <footer>
+       
+        <div class="footer-widget">
+          </footer>
+    </div>
+</body>
+</html>

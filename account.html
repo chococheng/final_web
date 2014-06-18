@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>政大球場資訊平台</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="styles/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="styles/colorbox.css" rel="stylesheet">
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="scripts/jquery.colorbox.js"></script>
+
+  <script type="text/javascript" src="scripts/ball.js"></script>
+
+	</head>
+	<body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">系隊版</a></li>
+            <li><a href="menu.html">賽程表</a></li>
+            <li><a href="place.html">借球場</a></li>
+            <li><a href="rule.html">規則</a></li>
+
+            <!--li><a href="reviews.html">Reviews</a></li-->
+            <!--li><a href="contact.html">Contact</a></li-->
+          </ul>
+        </nav>
+        <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="account.html" id="accountinfo" class="acc">帳戶</a></p>
+      </header>
+      <div class="wrapper">
+        <div class="border"></div>
+        <article class="fullwidth gallery">
+          <h3>我的帳戶</h3>
+          <br>
+          <form name="fm4">
+            <p>重新設定密碼 :<br>
+               <!--p>輸入預設密碼 : <input type=password name= "originPassword"></p-->
+               <p>輸入新密碼 :　<input type=password name="newPassword" ></p>
+               <p>再次輸入新密碼 :　<input type=password name="passwordCheck" ></p>
+            </p>
+            <p>隊長姓名 : <input type=text name= "nameCap1" style="width:100px;"></p>
+            <p>隊長連絡電話 : <input type=text name= "phoneCap1" ></p>
+            <p>隊長email : <input type=text name="mailCap1" ></p>
+            <p>副隊長姓名 : <input type=text name="nameCap2"  ></p>
+            <p>副隊長連絡電話 : <input type=text name= "phoneCap2"></p>
+            <p>副隊長email : <input type=text name= "mailCap2" ></p>
+            <p>系隊資訊 : <br>
+              <textarea name="teamInfo" rows=8 cols=40 wrap=physical></textarea>
+            </p>
+            <p>照片：<input type="file" value="upload" id="imageload" name="imgfile" />
+                    <input type="button" id="team_phoho" name="image"/></p>
+
+
+            <center>
+              <input type="button" id="account_submit" value="送 出"/><INPUT TYPE=reset VALUE="重 寫">
+            </center>
+
+          </form>
+          <form onsubmit="return CheckData()" action="https://db.books.com.tw/mem_adduser.php" method="post" name="AP_CT">
+
+
+        </article>
+        <div class="border2"></div>
+        <br>
+      </div>
+      <footer>
+       
+        <div class="footer-widget">
+          </footer>
+    </div>
+</body>
+</html>

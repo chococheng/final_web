@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>政大球場資訊平台</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  function scrollToElement(selector, time, verticalOffset) {
+    time = typeof(time) != 'undefined' ? time : 1000;
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $(selector);
+    offset = element.offset();
+    offsetTop = offset.top + verticalOffset;
+    $('html, body').animate({
+        scrollTop: offsetTop
+    }, time);
+}
+</script>
+<script>
+Parse.initialize("SKfw8dxK0Mb7xIPUw8oT4UIwISEMXrVYlVyN9oAZ", "1dKtJ5ywMf1l6O0Jl6X2SLetVtfFFhj1iPvYUWnl");
+$(document).ready(function(){
+  $('#baseball').click(function () {
+    scrollToElement('#baseball-content');
+  });
+  $('#volleyball').click(function(){
+    scrollToElement('#volleyball-content');
+  })
+  var currentUser = Parse.User.current();
+  console.log(currentUser.get('major'));
+})
+
+  
+</script>
+</head>
+<body>
+<div id="container">
+  <header>
+    <nav>
+      <ul id="nav">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html" class="current">系隊版</a></li>
+        <li><a href="menu.html">賽程表</a></li>
+        <li><a href="place.html">借球場</a></li>
+        <li><a href="rule.html">規則</a></li>
+
+
+        <!--li><a href="reviews.html">Reviews</a></li-->
+        <!--li><a href="contact.html">Contact</a></li-->
+            
+      </ul>
+    </nav>
+  <p id="account"><a href="#" id="logout" class="acc">登出</a><a href="account.html" id="accountinfo" class="acc">帳戶</a></p>
+  </header>
+  <div class="wrapper">
+    <div class="border"></div>
+    <article>
+      <h3>資管系</h3>
+      <ul id="sub-nav">
+        <li><a href="#" id="baseball">棒球隊</a></li>
+        <li><a href="#" id="volleyball">排球隊</a></li>
+        <li><a href="#" id="baseball">羽球隊</a></li>
+        <li><a href="#" id="basketball">籃球隊</a></li>
+        <li><a href="#" id="tabletennis">桌球隊</a><li>
+
+      </ul>
+      <div class="clear"></div>
+      
+      <h5 id="baseball-content">棒球隊<h5>
+      <!--div class="date"><span class="day">24</span> <span class="month">May</span> <span class="year">2011</span> </div-->
+      <img src="jagar.jpg" width="600"  alt="" />
+      <p> 隊長：陳曉明<br>
+      隊長電話：0981726354<br>
+       隊長信箱：nccu@example.com<br>
+       副隊長：黃小坤<br>
+       副隊長電話：0912345678</br>
+       副隊長信箱：nccuwwwwww@example.com</br>
+      描述：我們是一群熱血青年</p>
+
+
+      <h5 id="volleyball-content">排球隊<h5>
+      <img src="jagar.jpg" width="600"  alt="" />
+     <p> 隊長：陳曉明<br>
+      隊長電話：0981726354<br>
+       隊長信箱：nccu@example.com<br>
+       副隊長：黃小坤<br>
+       副隊長電話：0912345678</br>
+       副隊長信箱：nccuwwwwww@example.com</br>
+      描述：我們是一群熱血青年</p>
+    </article>
+    <aside class="sidebar">
+      <h3>系所</h3>
+      <ul id="toggle">
+        <li><div>商學院</div>
+          <ul>
+            <li>資管系</li>
+            <li>國貿系</li>
+            <li>金融系</li>
+            <li>會計系</li>
+            <li>企管系</li>
+            <li>財管系</li>
+            <li>風管系</li>
+            <li>統計系</li>
+          </ul>
+        </li>
+        <li><div>文學院</div>
+          <ul>
+            <li>中國文學系</li>
+            <li>歷史系</li>
+            <li>哲學系</li>
+
+          </ul>
+        </li>
+        <li><div>理學院</div>
+          <ul>
+            <li>應用數學系</li>
+            <li>心理系</li>
+            <li>資訊科學系</li>
+            <li>金融系</li>
+          </ul>
+        </li>
+        <li><div>社會科學院</div>
+          <ul>
+            <li>政治系</li>
+            <li>財政系</li>
+            <li>公共行政系</li>
+            <li>地政系</li>
+            <li>經濟系</li>
+            <li>民族系</li>
+          </ul>
+        </li>
+        <li><div>法學院</div>
+          <ul>
+            <li>法律系</li>
+          </ul>
+        </li>
+        <li><div>外國語文學系</div></li>
+      </ul>
+      
+    </aside>
+    <div class="border2"></div>
+    <br>
+  </div>
+  <footer>
+    </footer>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+  $("#toggle > li > div").click(function () {
+    if (false == $(this).next().is(':visible')) {
+      $('#toggle ul').slideUp();
+    }
+    $(this).next().slideToggle();
+    
+  });
+  //var $currIcon=$(this).find("span.the-btn > i");
+
+})
+</script>
+</html>
